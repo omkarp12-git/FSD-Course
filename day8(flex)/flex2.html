@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-2</title>
+</head>
+    <style>
+        .parent{
+            border: 1px solid black;
+            height: 800px;
+            display: flex;
+            /* justify-content: space-between; */
+            align-content: space-between;
+            flex-wrap: space-between;
+            gap: 25px;
+        }
+
+        .item{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            font-size: 50px;
+        }
+        
+        #special{
+            background-color: brown;
+            flex-shrink: 1;
+        }
+
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: green;
+        }
+        .three{
+            background-color: blue;
+        }
+        .four{
+            background-color: yellow;
+        }
+        .five{
+            background-color: pink;
+        }
+        .six{
+            background-color: cyan;
+        }
+        .seven{
+            background-color: orange;
+        }
+        .eight{
+            background-color: purple;
+        }
+
+    </style>
+<body>
+       <div class="parent">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three" id="special">3</div>
+        <div class="item four">4</div>
+        <div class="item five">5</div>
+        <div class="item six">6</div>
+        <div class="item seven">7</div>
+        <div class="item eight">8</div>
+    </div>
+</body>
+</html>
+
+
+  <!--  flex model is a one dimensional layout (row, column)
+      flex container -- parent element
+        flex item -- child element
+
+    parent --- display: flex
+                default direction: row
+                change direction: flex-direction
+
+                Main axis -- direction of flex items
+                Cross axis -- perpendicular to main axis
+
+    direction : row
+            main axis -- X axis
+            cross axis -- Y axis
+            
+    direction : column     
+            main axis -- Y axis
+            cross axis -- X axis   
+
+
+
+    justify-content -- flex-start
+                          flex-end
+                          center
+                          space-between
+                          space-around
+                          space-evenly        
+     -->

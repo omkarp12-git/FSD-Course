@@ -1,0 +1,635 @@
+JavaScript:
+----------
+          - is a scripting langugage
+          - used to create dynamic(behaviour/functionalities) and interactive webpages/application
+          - It is used as client(UI) and server side(Node JS) language
+          - It is a synchornous language(it executes the code line by line )
+          - It is a case sensitive
+          -ES(ECMA Script)
+
+
+Javascript is used in :
+-----------------------
+                 React JS --library
+                 Node Js  --server
+                 Angular Js --Framework
+
+
+We can add Js in our weppage:
+-----------------------------
+                   1.Inline JS
+                   2.Internal Js
+                   3.External JS
+
+
+Tokens:
+=======
+        building blocks of a program
+        1.Keywords
+        2.Identifiers
+        3.Values/data/literals
+        4.variables
+        5.Operators
+        6.Separators
+
+
+1.keywords: reserved words/pre defined words
+     ex: let , var , const , function , if , for ,while etc.,
+=====================================================================================
+2.Identifiers: names providing to the varibales , objects , functions , list etc.,
+
+Rules:
+   1.names cannot start with number
+   2.names cannot start with special character (except _,$)
+   3.don't provide space between names
+   4.keywords are not allowed for names
+   5.should be short , simple and meaningful
+======================================================================================
+3.value/literal/data:
+       number : 10 , -20 , 46.89
+       String : group of characters
+              : "xyz"  , 'xyz' , `xyz`(back tick/template string -- used for interpolation)
+       boolean: true / false
+       null
+       undefined
+       array : [10 ,20,30]
+       objects:{
+           "key1"=value1,
+           "key2"=value2
+       }
+
+       Data divide into two types:
+        1.Primitive Data Types -- storing single value
+             number
+             Strings
+             boolean
+             null
+             undefined
+             symbol
+             bigint
+              
+        2.Non - Primitive Data Types -- multiple data 
+             objects
+             Json
+             arrays
+             Map
+             Set 
+
+
+Note : typeOf operator helps to know the datatype /literal type 
+
+======================================================================================
+$.variable: It is a container used to store a data /value /literal
+
+Declaration of variable:(providing names)
+------------------------
+            var 
+            let
+            const
+assiging/initalizing the variable:
+--------------------------------
+    let a;
+    a=10;
+
+re declaring the variable
+--------------------------
+    let a ;
+    let a ;
+
+re-assiging/re-initalizing the variable
+---------------------------------------
+    let a;
+    a=10; //assiging
+    a='xyz';//re-assiging
+
+hoisting the variable
+--------------------
+     it is a behaviour where variable and function declarations are moved to top of the scope 
+     before execution
+
+     let a;
+     console.log(a);
+    
+     a=10;
+
+----------------------------------------------------------------------------------------
+                         var                  let                      const
+----------------------------------------------------------------------------------------
+scope                  function               block                    block
+
+re-declare              yes                    No                       no
+
+re-assign               yes                   yes                       no
+
+declaring without      undefined             undefined                 Error
+assiging
+(assiging)              optional             optional                  mandatory
+
+hoisting                 yes                    yes                      yes
+----------------------------------------------------------------------------------------
+
+===============================================================================
+Operators:
+----------
+       its a symbol used to perform operations on values(operands)
+
+       1.Arithmetic Operator :
+                               + , - , * , / , % , ** 
+
+            Note : + acts like concatination(merging) with string
+                   `${}`acts like concatination ---interpolation
+ 
+            Operator Presedence:
+                       ()
+                       **
+                       * / %
+                       + -
+
+       2.Assignment Operator/compund Assignment Operator:
+                              =, +=,-=,*=,/=,&=,**=
+       3.Comaprision Operator/Relational Operator
+                              < ,>,<=,>=,==,===,!=,!==
+
+                Note: ==  -->checks only values and ignores data type
+                      === -->checks both value and data type
+        4.Logical Operator:
+                      && , || , !
+        5.Conditonal Operator/Ternary Operator:
+                     opernad1?operand2:operand3
+
+                     opernad1--->condition
+                     operand2--->true
+                     operand3--->false
+        6.type of operator:
+                         used to know the data type of a literal/value
+        
+        7.unary operator:
+                 1.increment unary operator
+                        1.pre-increment:
+                                         ++value
+                                         first increases the values , then use
+                        2.post-increment:
+                                         value++
+                                         first it uses the value , then increases
+                 2.decrement unary operator
+                        1.pre-decrement:
+                                         --value
+                                         first decreases the values , then use
+                        2.post-decrement:
+                                         value--
+                                         first it uses the value , then decreases
+      
+====================================================================================================
+
+
+Conditional Statements:
+======================   
+              it is used to execute a block of code when condition is satisfied for one time
+              Types:  
+                 if Statements: when condition satisfy block of code will execute
+                           
+                           syntax: if(condition){
+                                    // code
+                                   }
+
+
+                 else if Statements: if condition satisfy if block will execute,
+                                    if condition is not satisfy then else block will execute
+
+                                    syntax: if(condition){
+                                        // true
+                                    }
+                                    else{
+                                        // false
+                                    }
+                        Note : without if , we cann't use else keyword
+
+                 else if ladder Statements: when we are having multiple conditions
+                   
+                        syntax:  if(condition1){
+                                  //
+                                }else if(condition2){
+
+                                }else if(condition3){
+
+                                }-----
+                                else if(condition ntimes){
+
+                                }else{
+
+                                }
+                       
+
+                 nested if Statements: conditional Statements inside another conditional Statements
+                        synatx :
+                             if(condition){
+                                if(condition){
+
+                                }else{
+
+                                }
+    
+                             }
+
+
+                 switch Statements: used to compare values with cases
+                              switch(value/variable/data){
+                                    case 1:     break;
+                                    case 2:     break;
+                                    case 3:...  break;
+                                    case n:     break;
+                                    default: 
+                              }
+            Note: break is a keyword or it acts like a breaking statement , which helps
+                  to break/interupt the program
+
+                  default is a keyword, if non of the cases are not matching then 
+                  default block will execute
+
+Note:   one line of code curly brackets is not needed (optional)
+        for more than one line {} are mandatory
+
+========================================================================================================
+Looping Statements
+==================
+        it is used to execute a block of code multiple times until the condition satisfy  
+        while Loop
+        dowhile Loop
+        for Loop
+
+                    while loop                                dowhile loop
+      -------------------------------------------------------------------------
+syntax            whiile(condition){                        do{
+
+                  }                                         }while(condition)
+  
+no.of iterations      0                                           1
+
+                 first check condition,                    first executes the code,
+                 then executes the code                    then checks the condition    
+        
+
+for loop:
+-------
+
+      for(declare and intilize;condition;updation){
+        
+      }
+
+
+===============================================================================
+Functions:
+----------
+        -it is a block of code {}
+        -creating a function once and use/calling function many times
+        -avoid code repetiton
+        -imrpove readability
+        -easy to maintain and debug
+        -code reusability
+
+Types:
+        Based on Arguments/Parameters:
+                             1.Argumented / parameterized Functions
+                                 function functionName(arg1,arg2....){
+
+                                 }
+                            - to print dynamic output based on inputs
+                             2.No Argumented /non-parameterized Functions
+                                 function functionName(){
+
+                                 }
+                            - to execute the same code everytime
+
+  
+Types :
+         1.Function Declaration
+         2.Function Expression
+         3.Arrow Function
+         4.Anonymous Functions
+         5.CallBack Function
+         6.Constructor Function
+         7.IIFE 
+         8.Higher Order Function
+         9.Generator Function
+        
+
+
+
+1.Function declaration:
+=======================
+   syntax:
+
+   function functionName(){
+     // code 
+   }
+
+   functionName()// caller
+   Note: without calling a functionName it won't execute the code
+         hoisting is possible
+   
+2.Function Expression:
+=====================
+    syntax :
+
+    let variable/functionReference=function (){
+                     //code
+    }
+    functionReference();//caller
+
+3.Arrow Function:
+=================
+    syntax:
+      let ref=()=>{
+
+      }
+      ref();//caller
+
+4.Anonymous Function:
+=====================
+         a function whithout name, arrow function and function expression will act like 
+         anonymous function
+
+         syntax:
+
+         setTimeOut(()=>{
+
+         },timeout in sec);
+
+
+
+5.callback function:
+====================
+            a function is passing through Arguments in another function
+
+    syntax:
+     function f1(){
+
+     }
+     function f2(){
+
+     }
+     function mainFunction(var1,var2,fun1,fun2){
+
+     }
+     mainFunction(10,20,f1,f2);
+
+6.Constructor function :
+=======================
+                 useds to create Object 
+                
+        syntax : 
+           function FunctionName(ar1,arg2,arg3...){
+            this.arg1=arg1;
+            this.arg2=arg2;
+           }
+
+           new FunctionName(val1,val2,val3...)//caller
+    Note: indicates the current object
+
+7.IIFE (immediately invoked function expression)
+=======
+       - calling a function immediately after creating/declaraing
+    
+    synatx:
+    (
+      function(){
+
+      }
+    )();
+8.Generator Function:
+=====================
+           - a function is used to generate values or create iterators/generators
+
+           syntax:
+              function* functionName(){
+                yield value1;
+                .....
+                yield valueN;
+              }
+          - to access values from generators
+          let generator=functionName();
+          generator.next()---> returns data and value in object format
+
+9.Higher Order Function:
+========================
+            - It is a function , that allows another function as arguments 
+              and returns another function as return statement
+
+    syntax :
+          
+           function mainFunc(ar1,arg2,fun){
+            return fun(ar1,arg2);
+           }
+
+
+===============================================================================================================   
+Call Back hell / pyramid of doom
+=================================
+   This is a stuation where we have multiple call backs inside a callback  (nested functions)
+   - hard to maintain / modify
+   - hard to read
+   - hard to debug
+
+   use: when are dealing with time in synchornous code then it behaves like asynchornous so we won'template
+        get expected output , to avoid this senario we can use call back hell and promises
+
+Promises:
+=========
+     - It is an Object , used to handle asynchornous operations
+
+     states:
+           1.pending  -- starting /initial state
+           2.fulfilled -- if operation is success/resolve
+           3.Rejected  -- if operation if failed
+
+
+promises can be handle in two ways:
+
+1.then and catch
+     then()-- a function ,which is used to handle success of a promise
+     catch()-- a function , which is used to deal with failure of a promise 
+     finally()--a function , which executes even if we get success or failre
+2.async and await
+    async is a function which hold a promises 
+    await is a keyword used to wait for a promise to resolve 
+    await is used inside async function(mandatory)
+
+
+  Promise.race():
+  ==============
+        - it collects multiple promises in array format
+        - it returns single result
+        - First win , first Value
+        - it won't wait for all promises to complete
+
+Promise.all():
+==============
+         - it collect multiple promises in array format
+         - it result promises in array format , when all promises are in resolve state
+         - if any promise is failed it execute catch block as errors
+
+Promise.allSettled():
+=====================
+          - it collect multiple promises in array format
+          - it result promises in array format , in the form of object which consit state and value
+
+==================================================================================================
+
+Object:
+========
+            - real world entity, which is a combination of properties/data/variables and functions/action/method
+            - data is stored in the form of key and valur pair 
+            - object is enclosed in {}
+                            syntax: 
+                                {
+                                    "key1":value1,
+                                    "key2":value2
+                                }
+Note : In Js every object consist of prototype
+
+creatation of objects:
+                 1.Constructor function
+                 2.class and Constructor
+                 3.Object literal
+                 4.Object.create()
+
+6.Constructor function :
+                 useds to create Object 
+                
+        syntax : 
+           function FunctionName(ar1,arg2,arg3...){
+            this.arg1=arg1;
+            this.arg2=arg2;
+           }
+
+           new FunctionName(val1,val2,val3...)//caller
+    Note: indicates the current object
+
+2.class and Constructor:
+             - it is a template for creating objects
+ 
+ syntax :
+    class ClassName{
+        Constructor(ar1,ar2){
+            this.arg1=arg1;
+            this.arg2=arg2;
+        }
+    }
+
+3.Object literal:(static way)
+     synatx:
+          let varName={
+            k1=v1,
+            k2=v2,
+
+          }
+4.Object.create():
+    
+    const obj={
+        'key1'='val1'
+    }
+
+    let newObj=Object.create(obj);
+      
+      - it is a way of creating a new object based on existing object (Inheritance)
+      - thus , it can share the prperties and functions of an existing object--- prototype
+
+Prototype:
+----------
+       -it is a property of an object
+       -it allows other object to inherit/sharing  properties and functions
+       -it helps to add new properties and functions into object
+       -it helps to create a prototype chain between objects
+
+Prototype chaining:
+-------------------
+         -it is a chain of objects
+         -it can achieve using Object.create()
+   
+
+
+JSON:(JavaScript Object notation)
+=====
+     - it is a plain text, lightweight data interchange text
+     - used to store data(noSQL) and exchange data (client<--->server)
+
+
+                  JS Object                       JSON Object
+ -------------------------------------------------------------------------------------
+syntax           flexible and dynamic             fixed/strict and static
+
+keyQoutes        optional                          mandatory     
+
+JSON RULES:
+----------
+       - key must be indicated with double Qoutes
+       - keys must be unique
+       - Json Object need to enclosed in {} 
+       - Json array need to enclosed in []
+
+Json Types:
+----------
+     1.Json Object
+     2.Json Array
+     3.Nested Json 
+
+accessing the values :
+--------------------
+         - can access by using .notaion or [] notation
+
+re-assign/re-intilize the values:
+---------------------
+        obj.key=newValue  or obj['key']=newValue
+
+delete a value:
+---------------
+         delete obj.key   or delete obj['key]
+
+merge of objects
+-----------------
+          -merging/combining the objects using ...(spread operator ) or Object.assign()
+          Note: while merging keys must be uniques , if same key is present in both the objects 
+                it prefers second object data
+adding the key-value pair
+------------------------
+            - use .notation or [] notation or ... (spread operator) or Object.assign
+
+Destructing the Object:
+-----------------------
+        -it is a super way for accessing , adding  or assigning values, renaming keys
+        -it makes code cleaner,resuable,simple
+
+syntax:
+
+const user={
+    "name":"raj",
+    "email":"raj@gmail.com"
+}
+console.log(user.name);
+
+
+let {name,email}=user;
+console.log(name);
+
+
+
+Object methods:
+--------------
+Object.keys()-- returns keys in array format
+Object.values()---returns values in array format
+Object.entries()---return key-value pair in array format
+
+Iterating the object key-values:
+------------------------------
+      - for in loop
+          syntax:
+                for(let key in Obj){
+                  //logic
+                }
+      - forEach function
+               obj.forEach(
+                (key)=>{
+                    // logic 
+                }
+               )
+=====================================================================================

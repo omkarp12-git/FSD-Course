@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+    <script src="intro.js"></script>
+</head>
+<body>
+    <!-- Inline JS -->
+    <button onclick="alert('Hello, World!')">Click Me</button>
+    <br><br>
+
+    <!-- Internal JS -->
+    <script>
+        function doubleClick() {
+            alert('You double-clicked the button!');
+        }
+    </script>
+    <button ondblclick="doubleClick()">Double click on me</button>
+    <br><br>
+
+
+    <!-- External JS -->
+     <i onclick="f1()">Click on me</i>
+</body>
+</html>

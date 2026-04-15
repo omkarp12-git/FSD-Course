@@ -1,0 +1,55 @@
+div{
+    color: red;
+}
+/* id selector:------ it indicates with #idname */
+#div4{
+    color: blue;
+    /* 
+        class selector --- it includes with .className
+                        --- can use multiple time
+                        --- lower than id
+                        
+    */
+}
+.div2{
+    color: green;
+    border:1px solid black;
+}
+
+div p {
+    color:blue;
+    background-color: cyan;
+}
+
+/* .d1 + p {
+    background-color: red;
+} */
+
+.d1 ~ p {
+    background-color: purple;
+}
+
+/* id ----> #
+    class ----> .
+    element ----> tagName
+    grouping ----> s1,s2,s3
+    universal ----> *
+    descendent ----> p c ==> all childs
+    child ----> p > c ==> only direct child
+    adjacent sibling ----> brother + sister ==> next sister
+    general sibling ----> brother ~ sister ==> all sister
+     */
+
+/* Attribute Selector */
+input[type = "text"] {
+    background-color: aquamarine;
+}     
+
+.A123 {
+    color: red;
+}
+/* NOTE: names need to start with a-z, A-Z, _ , - */
+
+.A1221 {
+    background-color: yellowgreen;
+}

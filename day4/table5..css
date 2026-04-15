@@ -1,0 +1,29 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #d9d9d9;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+table {
+    border: 3px solid black;      /* 🔥 Strong outer border */
+    border-collapse: separate;    /* keep borders separate */
+    border-spacing: 4px;          /* space between cells */
+    background-color: #e6e6e6;
+}
+
+/* Cells */
+th, td {
+    border: 2px solid black;      /* 🔥 thicker inner borders */
+    padding: 6px 12px;
+    background-color: #ffffff;    /* white so borders stand out */
+}
+
+/* Header */
+th {
+    font-weight: bold;
+}

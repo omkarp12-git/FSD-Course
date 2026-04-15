@@ -1,0 +1,40 @@
+body {
+    background-color: #dcdcdc;
+    font-family: "Times New Roman", serif;
+}
+
+.container {
+    width: 750px;
+    margin: 40px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 6px; /* spacing between cells */
+}
+
+/* Header styling */
+th {
+    background: linear-gradient(#9acd32, #7fbf00);
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Table cells */
+td {
+    background-color: #c3d6b0;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #2f2f2f;
+}
+
+/* Add subtle inner border look */
+td, th {
+    border: 1px solid #b5c9a3;
+}

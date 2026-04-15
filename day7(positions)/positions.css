@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* for static top bottom left right wont be applicable
+   In HTML document every element is static by default.
+*/
+#_static{
+    width: 200px;
+    height: 200px;
+    background-color: #de4444;
+    top: 20px;
+    left: 40px;
+    /* position: relative; */
+}
+
+/* for static top bottom left right will be applicable
+   We can move element from its original position.
+*/
+
+#_relative{
+    width: 200px;
+    height: 200px;
+    background-color: #68de44;
+    top: 20px;
+    left: 40px;
+    position: relative;
+}
+
+#fixed{
+    background-color: pink;
+    width: 400px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/* it is the combination of relative and fixed */
+#sticky{
+    background-color: black;
+    height: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.relative{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.box1{
+    background-color: red;
+    top: 100px;
+    left: 40px;
+    z-index: 6;
+}
+
+.box2{
+    background-color: blue;
+    left: 100px;
+    z-index: 19;
+}
+
+.box3{
+    background-color: green;
+    left: 160px;
+    bottom: 80px;
+    z-index: 3;
+}
