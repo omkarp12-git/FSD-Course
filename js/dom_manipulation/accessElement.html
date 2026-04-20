@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Element</title>
+</head>
+<body>
+    <p id="p"></p>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <div class="div"></div>
+    <div class="div"></div>
+
+    <p class="p1">First</p>
+    <p class="p1"></p>
+    <script>
+       let p = document.getElementById('p');  // Access elements by using 'getElementsById' that is by giving 'ID' to particular tag.
+       console.log(p);
+
+       let h1 = document.getElementsByTagName('h1'); // Accessing elements by using 'getElementsByTagName' that is by using particular Tag 
+       console.log(h1); //HTML collection
+       
+       let div = document.getElementsByClassName('div'); // Accessing the elements by using 'getElementsByClassName' that is by giving 'Classname' for particular tag.
+       console.log(div); // HTML Collection(2) [div.div1, div.div1]
+
+       // it will find selector for (first matching)
+       let classSelector = document.querySelector('.p1')
+       console.log(classSelector);
+       // it result all matching selectors
+       let classSelectorAll = document.querySelectorAll('.p1');
+       console.log(classSelectorAll); // NodeList(2) [p.p1, p.p1]
+       
+       
+    </script>
+</body>
+</html>
