@@ -1,3 +1,5 @@
+// radha.b@excelr.com
+
 let arr = [107, 3, 43, 23, 44];
 
 //============find the sum of array elements.==================
