@@ -633,3 +633,305 @@ Iterating the object key-values:
                 }
                )
 =====================================================================================
+
+Array :
+------
+   -Array is a collection/list of values/items/elements
+   -It is used to store multiple values in single variable/reference
+   -Array can accept same data type or different data type
+   -Array is mutable(modify after creation)
+   -Array is enclosed in []
+   -Array will store values in index position
+
+   synatx :   let arr= [10 , 20 , 30] --->size/lenght-3
+                        0    1    2   --->indexing position
+
+Array Manipulation (read, update ,delete ,create)
+==================================================
+Array Creation :
+--------------
+               1.Array literal
+               2.Array Constructor and new keyword
+               3.Array.from
+               4.Array.of
+ 
+            // array literal
+            let arr=[10,20,30];
+            console.log(arr);
+            console.log(arr.length);// 3 size or length
+            let arr2=[10,"mango",true,{"name":"raj"}]
+            console.log(arr2);
+
+            //using new keyword
+            let arr3=new Array(10,20,30,40);//[10,20,30,40]
+            console.log(arr3);
+            let arr4=new Array(4);//[_,_,_,_]
+            console.log(arr4);
+
+            // from function
+            let value="hello world";
+            let arr5=Array.from(value);
+            console.log(arr5);
+
+            // of function
+            let arr6=Array.of(10,20,30,40);//[10,20,30,40]
+            console.log(arr6);
+            let arr7=Array.of(2);//[2]
+            console.log(arr7);
+
+
+Accessing/Reading a value:
+-------------------------
+                 -through index position - positive 
+                 -through at function    - positive or negative
+                 let arr=[ 10 , 20 , 30 ]
+                           0    1    2
+                           -3   -2   -1
+
+Adding a value:  (we can change the size of an array)
+--------------
+                - through index position --specific position
+                - puah(value)---adds element to last position
+                - unshift(value)--adds element to first position
+
+delete a value:
+--------------
+                - delete keyword -- there won't be any change in size , it will make the value is empty
+                - pop() ---removes element at last position and returns deleted value
+                - shift()--removes element at fitst position and returns deleted value
+
+updating  a value:
+----------------
+               - througn index position
+               - array functions
+
+Iterate an array:
+---------------- 
+                  while loop - index 
+                  do while loop -index
+                  for loop   -index
+                  for in loop -index
+                  for of loop -value/element
+
+
+forEach():
+---------
+          - it is a callback function 
+          - which will accept a function ,contains 3 arguments 
+          - 1args--value (mandatory) , 2arg--index , 3arg--arr
+          - it won't return any value
+    syntax :
+       arr.forEach(
+        (value,index,arr)=>{
+
+        }
+       )
+
+map()
+-----
+      - it is a callback function
+      - It helps to process the data(data manipulation/processing) 
+      - It returns new array which is same size as input array
+  syntax : 
+      arr.map(
+        (value,index,arr)=>{
+            return _____;
+        }
+      )
+
+filter() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data(based on condition) 
+      - It returns new array , size will change from input size
+  syntax : 
+      arr.filter(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+reduce()
+--------
+         - It is a call back function
+         - It returns  a single value by performing operation on each elements of an array
+
+    syntax:
+        arr.reduce(callBack,intialValue)
+        
+        function  callBack(accumulator, currentValue, currentIndex,array){
+          return accumulator
+        }
+accumulator is used to store values/result of operation
+accumulator and currentValue are mandatory in callBack
+ 
+
+reverse()
+---------
+        - it helps to reverse an array 
+        - IT will modify input array and returns new reversed array
+    syntax :
+         arr.reverse();
+
+
+find() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns first matching result
+      - It returns  a single value
+  syntax : 
+      arr.find(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+findLast() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns last matching result
+      - It returns  a single value
+  syntax : 
+      arr.findLast(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+
+findIndex() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns first matching result index position
+      - It returns  a single value(index position)
+  syntax : 
+      arr.findIndex(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+findLastIndex() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns last matching result index position
+      - It returns  a single value(index position)
+  syntax : 
+      arr.findLastIndex(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+indexOf():
+---------
+         - it helps to find an element from start  in an array
+         - if elements is present it returns index position or else it returns -1
+         syntax:
+            arr.indexOf(value,startIndex);
+         - startIndex is optional
+ 
+lastIndexOf():
+---------
+         - it helps to find an element  from last in an array
+         - if elements is present it returns index position or else it returns -1
+         syntax:
+            arr.indexOf(value,startIndex);
+         - startIndex is optional
+
+includes()
+--------
+        -it helps to find an element in an array
+        -it element is present then it returns true or else retruns false
+        syntax:
+            arr.includes(element);
+        
+
+every() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns boolean result
+      - if all values are satisfying with the condition it returns true or else retruns false
+      - It returns  a boolean value
+  syntax : 
+      arr.every(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+some() -- Predicate function
+-----
+      - it is a callback function
+      - It helps to filter the data and returns boolean result
+      - if some of the  values are satisfying with the condition it returns true 
+      - if none of the values are not satisfying with the condition , then it returns false
+      - It returns  a boolean value
+  syntax : 
+      arr.some(
+        (value,index,arr)=>{
+            return condition;
+        }
+      )
+
+    
+splice()
+-------
+       -it helps to delete , modify the data in an array
+       -It won't effect input/original array
+     syntax:
+          arr.splice(startIndexPosition,deleteCount,updatedValue ..........);
+
+          arr.splice(startIndexPosition) ---it will start deleting from index position to the end
+          arr.splice(startIndexPosition,deleteCount)-->from index position ,it delete values based on count
+          arr.splice(startIndexPosition,deleteCount,updatedValue[]) -- it deletes the data , 
+              in the place of deleted data , it adds new data/updated data
+
+slice()
+--------
+       - it helps to extract / provide shallow copy from original array
+       - it won't modified input array
+       - it returns a new array(shallow copy)
+       syntax:
+          arr.slice(startIndex,endIndex)
+
+          arr.slice(startIndex)--from startindex to end ,  it tries to extract 
+          arr.slice(startIndex,endIndex)- it extarct from startIndex to endIndex
+    
+    Note: startIndex-Inclusive
+          endIndex-Excelusive
+
+fill():
+-------
+       -it helps to fill an element in an array
+       syntax:
+        arr.fill(NewValue)--->it will update all values in an array with new Values
+        arr.fill(newValue,startIndex)->it will update newValue from start index position
+        arr.fill(newValue,startIndex,endIndex)->it will update newValue from start to end
+
+        Note: startIndex-Inclusive
+              endIndex-Excelusive
+
+
+
+
+
+String :
+------
+       - It is a collection of character
+ 
+ toString(): it converts array into string , and each values can be join by ,(comma)
+ join(character): it converts array into string , and each values can be join with specific character
+
+padStart(size, charcter): it helps to add characters at starting of a string based on size
+padEnd(size,charcter):it helps to add characters at ending of a string based on size
+
+trim()--removes whitespces
+trimStart()--remove whitespaces at start
+trimEnd()--remove whitespaces at end
+
+repeat(count)-->It repeat the string based on count times
+replace(serachValue,replacedValue)- helps to replace a character 
+substring(startIndex,endIndex)-same like slice , used to extract the string 
+split(charcter , limit)- based on charcter , it will divide string into multiple string and make as an array
+                       -based on limit it returns those many elements  and it is optional
