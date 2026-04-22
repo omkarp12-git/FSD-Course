@@ -7,25 +7,52 @@
 </head>
 <body>
 
-    <div id="container">
+    <div id="container" style="border: 1px solid black;">
 
         <div id="removed">
             This is a removed text.
         </div>
+
+        <div id="replace">This is the Old text.</div>
+
+        <div id="cloned">This is a Cloned text.</div>
     </div>
     
     <script>
     let container =  document.getElementById('container');
+
     let paragraph = document.createElement('p');
-    paragraph.innerHTML = '<b>Document Object Model';
+
+    paragraph.innerHTML = '<b>Document Object Model</b>';
     paragraph.style.color='red';    
-    container.append(paragraph);
+    container.append(paragraph); // It will add at last in the container.
 
     let removed = document.querySelector('#removed');
     console.log(removed);
     
     container.removeChild(removed);    
-        
+    
+    let heading2 = document.createElement('h2');
+    heading2.innerHTML = 'This is a heading 2';
+    container.prepend(heading2); // it will add at first in the container.    
+
+    let heading3 = document.createElement('h3');
+    heading3.innerHTML = 'This is a heading 3';
+    container.insertBefore(heading3, paragraph); // it will add before the paragraph in the container.
+
+
+
+
+   let oldText = document.querySelectorAll('#replace');
+   let newText = document.createElement('p');
+   newText.innerHTML = 'This is the new text using p tag.';
+   container.replaceChild(newText, oldText[0]);
+
+   let cloned = document.getElementById("cloned");
+   let newCloned = cloned.cloneNode(true); // true for deep cloning.
+   container.insertBefore(newCloned, cloned); // it will add before the newText in the container.
+
+
     </script>
 </body>
 </html>

@@ -951,4 +951,83 @@ repeat(count)-->It repeat the string based on count times
 replace(serachValue,replacedValue)- helps to replace a character 
 substring(startIndex,endIndex)-same like slice , used to extract the string 
 split(charcter , limit)- based on charcter , it will divide string into multiple string and make as an array
-                       -based on limit it returns those many elements  and it is optional
+                       -based on limit it returns those many elements  and it is optional.
+=================================================================================================================================
+BOM(Browser Object Model):
+--------------------------
+            - It is a collection of objects that represents browser environment.
+            - It provides access to the browser objects like window and document.
+Use cases:                                  
+        - Redirect to another page.
+        - Open a new window/tab.
+        - Access browser info, history
+        - Access browser Navigation.
+        - Handling timeouts and intervals.
+        - Access browser cookies(session).
+        - Browser alert messages.
+
+DOM(Document Object Model):
+---------------------------
+            - It represents the HTML document structure and its content as a tree of objects.
+            - It helps to access HTML elements and  its properties.
+            - it helps to manipulate the HTML elements and CSS.
+
+Use Cases:
+        - Creating Dynamic webpages.
+        - Manipulating HTML Documents.
+        - Create interactive Webpages.
+        - Handling events.
+         ---------------------------------------------------------------------------------------------------------
+                                 DOM                                                  BOM                         |
+         ---------------------------------------------------------------------------------------------------------|
+purpose                  - interact with a HTML document                 - interact with a browser                |
+                                                                                                                  |
+main object              - Document                                      - window                                 |
+------------------------------------------------------------------------------------------------------------------|
+
+
+DOM Manipulation:
+-----------------
+                1. Access Elements.
+                2. Create Elements.
+                3. Elements Manipulation (adding, removing, replacing).
+                4. Attribute Manipulation.
+                5. CSS Manipulation.
+                6. Event Manipulation/Handling.
+
+1. Element Accessing:
+---------------------
+        1. getElementById(idName):- Single element based on ID Name(unique).                
+        2. getElementsByClassName(ClassName):- Returns multiple elements (HTML Collection).
+        3. getElementsByTagName(tagName):- returns multiple elements(HTML Collection).
+        4. querySelector(queryName):- returns first matching result (Based on selector matching).
+        5. querySelectorAll(queryName):- returns all matching results(NodeList).
+
+2. Create Elements:-
+-------------------
+        - Using createElement function of Document.
+
+3. Element Manipulation:
+------------------------
+    1. append()/appendChild() -- adds elements at the end in a parent element.
+    2. prepend()-- adds elements at the top in a parent element.
+    3. insertBefore(newElement, existingElement) -- adds elements in respective position based on element we are providing in 2nd Arguments.
+    4. replaceChild(newText, oldText) -- replace old elements with new element in parent container.
+    5. cloneNode()--- it helps to create an exact copy(cloned)
+
+4. Attribute Manipulation:
+--------------------------
+- Modifying Attribute by DOM Functions.
+1. setAttribute() -- adding Attribute.
+2. removeAttribute() -- removing Attribute.
+3. getAttribute() -- accessing Attribute and returns value.
+4. hasAttribute() -- checking attributes Exist or not.
+
+5.CSS Manipulation:
+------------------
+      1.style- adding Css (inline css).
+      2.ClassList.add()--adding class.
+      3.ClassList.remove()--removing class.
+      4.ClassList.toggle()------toggling class --(on/off).
+      5.ClassList.contains()---checking class present or not.
+      5.getComputedStyle()---accessing style.

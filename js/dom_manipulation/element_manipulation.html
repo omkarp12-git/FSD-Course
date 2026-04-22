@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation Operation</title>
+    <style>
+        #container{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+        <div id="removed">
+            This is a removed Text
+        </div>
+
+        <div id="replace">This is old text</div>
+
+        <div id="cloned">This is a cloned text</div>
+    </div>
+   
+    <script>
+         let conatiner=document.getElementById('container');
+
+         let paragraph=document.createElement('p');
+
+         paragraph.innerHTML='<b>Document Object Model</b>';
+         paragraph.style.color='red';
+         conatiner.append(paragraph) //it will add at last in the containier
+         
+         let removed=document.querySelector('#removed');          
+         conatiner.removeChild(removed);
+
+         let heading2=document.createElement('h2');
+         heading2.innerHTML='heading 2 ';
+         conatiner.prepend(heading2); //it will add at starting in the container
+
+         let heading3=document.createElement('h3');
+         heading3.innerHTML='heading 3'
+         conatiner.insertBefore(heading3,paragraph);//it will add before paragraph tag
+
+         
+         let oldText=document.querySelectorAll('#replace');
+         let newText=document.createElement('p');
+         newText.innerHTML='the new text using p tag';
+         conatiner.replaceChild(newText,oldText[0]);
+         
+
+         let cloned=document.getElementById("cloned");
+         let newCloned=cloned.cloneNode(true);
+          conatiner.insertBefore(newCloned,cloned);
+
+
+
+    </script>
+</body>
+</html>
