@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .box{
+            border: 1px solid black;
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+        }
+     </style>
+
+</head>
+<body>
+     <div id="div1">Adding</div>
+     <div id="div2" class="box">Removing</div>
+
+     <script>
+          let div1=document.querySelector('#div1');
+          div1.classList.add('box');
+          let div2=document.querySelector('#div2');
+          div2.classList.remove('box');
+          
+     </script>
+</body>
+</html>
