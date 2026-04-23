@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  10 -- 10
+          let num=10;
+          console.log(num.toString(2)); // convert number into binary number-- 2 indicates for binary
+
+
+        //   Bitwise And
+
+        let a=5 // 10 1
+        let b=3 // 01 1
+        // ---------------
+                    // 0 0 1
+
+            console.log(a&b); //001   -- decimal --1
+
+        //  1 0 1
+        //  0 1 1
+        // ----------
+            // 1 1 1
+
+           console.log(a|b);//111---deciaml -7
+           
+        //  1 0 1
+        //  0 1 1
+        // ----------
+        //    1  1  0   
+
+        console.log(a^b);//110 -- deciaml -6
+
+        // 101 -- 0 1 0
+        console.log(~a);//010  -- decimal---- -6
+        
+        // 5*2  -- 
+        console.log(a<<1); //10
+        // 5*2*2
+        console.log(a<<2); //20
+        // 5*2*2*2
+        console.log(a<<3); //40
+        
+       // 5/2---2
+        console.log(a>>1);//2
+        
+
+
+
+        // let value=7;
+        // 0  1  1  1
+        // 0  0  0  1
+        // ----------------
+// &       0  0  0  1  --- last digit is one ---odd number
+
+
+       let value=6
+
+    //     1 1 0
+    //     0 0 1
+    // --------------
+    // &   0 0 0  --- last digit is zero --even number
+
+        if(value&1){
+            console.log("odd number");
+            
+        }else{
+            console.log("even number");
+            
+        }
+       
+
+        // if(value%2==0){
+        //     console.log("even");
+            
+        // }else{
+        //     console.log("odd");
+            
+        // }
+
+  
+        
+
+let obj={
+    value1:"Element",
+    fun:function(){
+        console.log("function of an object" , this.value1);
+        
+    }
+}
+console.log(obj.value1);
+obj.fun();
+
+
+
+let obj2={
+    value1:"Element of Obj2"
+    
+}
+let fun2=obj.fun.bind(obj2);
+fun2();
+
+
+
+
+    </script>
+    
+</body>
+</html>

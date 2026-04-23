@@ -1031,3 +1031,124 @@ DOM Manipulation:
       4.ClassList.toggle()------toggling class --(on/off).
       5.ClassList.contains()---checking class present or not.
       5.getComputedStyle()---accessing style.
+
+
+      6.Event Manipulation:
+--------------------
+       function: it is a block of code used to perform a specific task
+               : it can be resuable
+        
+       event : it is an action occurs in browser side
+             : when event triggers , it will call functions to perform a task
+             : used to handle user interactoins
+
+    Examples:
+            1.mouse events --onclick, onDoubleClick, onMouseOver etc .,
+            2.Keyboard events--onKeyUp , onKeyDown , onKeyPress etc.,
+            3.Form Events ---onSubmit ,onChange, onFoucs,onBlur etc.,
+            4.Window Events---onLoad,onResize etc.,
+
+1.Adding event :
+---------------
+            1.inline :
+                   <h1  onEventName="functionName()" ></h1>
+            2.event property:         
+                 let span=document.getElementById('span');
+                    span.onEventName=functionName();                
+            3.addEventListener():
+                  let div=document.getElementById('div');
+                      div.addEventListener('eventName',functionName());
+
+2.Removing Event:
+----------------
+                -first we need to add event , then only we can delete an event
+
+                 let div=document.getElementById('div');
+                      div.addEventListener('eventName',functionName);
+                      div.removeEventListener('eventName',functionName);
+3.Dispatch Event:
+---------------
+                -It is used to fire an event programatically
+                -Dispatching an event means we manually trigger an event using JS instead of 
+                 waiting for user action
+
+                 disptachEvent(eventObject);
+               
+Event Propagation:
+------------------
+               -The event will propgagate from child to parent and vice versa
+            1.Event bubbling:
+                        - It will propagate from child to parent
+                        - this is default Propagation
+                        ex: button--->child---->parent
+            2.Event Captuirng/tricking
+                         - It will propagate from parent to child
+                         - In addEventListener() , we need to true in 3rd argument
+                         ex: parent--->child---->button
+    Note: event.stopPropagation() is used to stop propagation
+
+=========================================================================================================
+
+JQUERY 
+++++++   
+      - It is a fast , lightweight Js Library 
+      - We can simplify Html , CSS and Js tasks
+
+1.Accessing/Select Elemets:
+---------------------------
+$('tagName') //all tags
+$('#idName') //id
+$('.className') // class
+
+2.Adding Events:
+------------------
+$('tagName').eventName(function);
+
+3.Css Manipulation:
+-------------------
+$('tagName').css("propertyName","value");
+
+4.Adding Content:
+---------------
+$('tagName').text("text....");
+$('tagName').html("<h1>text....</h1>")
+=========================================================================================
+Closuers:
+--------
+         -It is a special function, which can access to the parent scope data/variable (lexical scope)
+         -It can access the varaibales/function  of parent scope
+         -It is use private variables or functions (Data Hiding --Encapsulation)
+
+         example:  
+         function parent(){
+            let property="home";
+           return  function child(){
+                console.log(property);
+             }
+         }
+         let children()= parent();
+         children();
+====================================================================================================
+ this:
+ ---- 
+       - It is a keyword , it refers an object
+       - It helps to call property / functions
+
+call():
+------
+       - It is a function , used to call a function 
+       - when you need to invoke a function immediately with a object value(this)
+         -- pass the values into a function as arguments
+
+apply():
+-------
+       - It is a function , used to call a function 
+       - when you need to invoke a function immediately with a object value(this)
+         -- pass the values into a function as array
+
+bind():
+------
+       - It is a function, used to bind(fix) the value of this keyword for a function
+        ---- pass the values into a function as arguments
+        ---- It retuns  a function 
+========================================================================================================

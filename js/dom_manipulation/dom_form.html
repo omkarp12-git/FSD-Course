@@ -1,70 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Form</title>
+    <title>Document</title>
     <style>
-        form{
+        form {
             border: 1px solid black;
-            padding: 10px;
-            width: 250px;
-        }
-        .error{
-            color: red;
         }
     </style>
 </head>
+
 <body>
-        <!-- Create a form of two inputs
-        1. Validate with DB credentials(static data)
-        2. if Username and password is correct then navigate to www.w3schools.
-        3. if username or passowrd is wrong then we need to print message on browser. 
+    <!--  create a form  of two inputs 
+         1.Validate with db crendetilas(static data)
+         2.if userName and Password is correct then naviagte to www.w3schools
+         3.if userName or password is wrong then we need to print message on browser
     -->
 
-<form action="#" id="form">
+    <form action="#" id="form">
+        <input type="text" name="userName" id="userName" placeholder="enter userName"><br><br>
+        <input type="text" name="password" id="password" placeholder="enter password"><br><br>
+        <button type="submit">LOGIN</button>
+    </form>
 
-    <div id="errorBox"></div>
-
-    <input type="text" id="userName" placeholder="Enter UserName"><br><br>
-    <input type="password" id="password" placeholder="Enter Password"><br><br>
-    <button type="submit">LOGIN</button>
-</form>
-
-<script>
-    let userName = "admin";
-    let password = "admin@123";
-
-    document.getElementById('form').addEventListener('submit', (event)=>{
-        event.preventDefault();
-
-        let name = document.getElementById('userName').value;
-        let pwd = document.getElementById('password').value;
+    <script>
+        let userName = "admin";
+        let password = "admin@123";
+        let form = document.getElementById('form');
 
         
-        let errorBox = document.getElementById('errorBox');
-        errorBox.innerHTML = "";
-
-        if(name === userName && pwd === password){
-            window.location.href = "https://www.w3schools.com/";
-        } else {
-            if(name !== userName){
-                let userError = document.createElement('h3');
-                userError.innerText = "Username is wrong";
-                userError.className = "error";
-                errorBox.appendChild(userError);
+        form.addEventListener('submit', (event) => {
+            // event.preventDefault(); // stop reload the page
+            let name = document.getElementById('userName').value;
+            let pwd = document.getElementById('password').value;
+            let h2 = document.createElement('h2');
+            if (name === userName) {
+                if (pwd === password) {
+                    window.location.href = 'https://www.w3schools.com/'
+                }
+                else{
+                    h2.innerHTML = 'password is incorrect'  
+                }
+            } else {
+                h2.innerHTML = name+ ' is wrong please enter correct userName'  
             }
+            h2.style.color = 'red'
+            form.prepend(h2);
+        })
 
-            
-            if(pwd !== password){
-                let passError = document.createElement('h3');
-                passError.innerText = "Password is wrong";
-                passError.className = "error";
-                errorBox.appendChild(passError);
-            }
-        }
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
